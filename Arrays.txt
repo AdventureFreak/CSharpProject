@@ -1,0 +1,5 @@
+An array is a set of elements with the same type.  Arrays are initialised by the type of data in the array followed by square brackets, like so: int[] myData.
+After this the exact elements of the array my be listed in curly braces: int[] myData = {1, 2, 3, 4, 5, 6, 7}.  Alternately, the array can be be initialised as a new array
+and the length of the array specified: int[] myData = new int[6].  Either way the length of the array must be stated.  The first method gives the length with how many pieces
+of data were put into the array.  When accessing elements from an array the array name is used followed by the index in square brackets: myData[3].  The first index is 1 and
+the last index is the length of the array minus 1. 
