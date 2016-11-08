@@ -1,0 +1,27 @@
+Loops are a way to repeat an action a set number of times. There are four different types of loops. The while loop checks a condition at the start and runs if it is true.
+The moment the condition is no longer true the while loop ends. If the condition is false to begin with nothing gets run in the loop. The do while loop is basically the same
+as a while loop except that the condition is checked after the loop is run. This means that the loop will run at least once no matter what. The for loop is useful when
+itterating though a set and known number of items or conditions. It can declare a variable to use for the itteration, set the condition to check, and icrememnt or decrememnt
+the itterator value. The foreach loop counts through all elements of a list, more or less. It is helpful when the length of the list may not be know as it counts until it gets
+to the end. The foreach loop can only read the information from the collection; it cannot change anything. If you want to do that use a for loop instead.
+
+Examples:
+while(x < 15) {
+//do stuff like move the player or something
+}
+The loop will run as long as x is smaller than 15.
+
+do {
+//more random game or other application things that must be done
+} while(notFinished == true);
+The loop will run as long as notFinished is true.  It will run at least once even if notFinished is false.
+
+for (int i = 0; i < maxHealth; i++) {
+//game stuff here, although this may not be the most practial use of a for loop. It's just an example though.
+}
+This loop sets an integer i to iterate with. It will run as long as i is less than maxHealth. After each execution of the loop i gets incremented.
+
+foreach(int days in month) {
+//counting days in the month! Alright! My examples seem to be lame today... oh well.
+}
+Assuming int month is an array, this loop will run as long as there are elements in month to read. As soon as there are none, the loop ends.
