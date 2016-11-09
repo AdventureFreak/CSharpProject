@@ -1,0 +1,34 @@
+Enumerations are a collection of constants. It is a way to keep track of values that are related without having to remember the values themselves. Enumerations are declared
+with an enum keyword followed by the name, the name must be capitalized as the enumeration is a group of constants.  Next all the constants within the enumeration are 
+declared in curly braces sepparated by commas. An enumeration by default gives the constants an integer type and starts the first one at 0. Each constant after that is 
+incremented by one.  The type and value of the constants can be overriden.  The type by adding a colon after the name followed by the type, and the value by setting the 
+constant within the braces equal to a new value.  Enumerations can be used to create a variable by using the enumeration as the variable's type. The value of that new 
+variable uses the enumeration, the dot opperator, an then the constant.  Enumerations canbe both passed into and returned from a function.  The way I see it, an enumeration 
+is like an array of constants.
+
+Also, I almost forgot, when declaring an enumeration a semicolon must be placed after the braces since it is a statement.
+
+Examples-----
+For my examples, lets say I have an item class. That item object can have a 'healing' type, so the player can be healed. If, however, I wanted different types of healing
+items that all do different ammounts of healing, I could use an enumeration to differentiate them.
+
+Declaring an enumeration:
+enum HealingType {potion, food, herbs, medicine};
+
+Overriding the enumeration's type:
+enum HealingType : double {potion, food, herbs, medicine}; //I recognize this isn't optimized at all, but its just an example
+
+Overriding the values:
+enum HealingType {potion = 2, food, herbs, medicine}; //potion has a value of 2 instead of 0, food has a value of 3 instead of 1, and so on for the rest
+or
+enum HealingType {potion = 2, food, = 5, herbs = 16, medicine = 24};
+
+Creating a variable from the enumeration (and setting it's value):
+HealingType itemType;
+itemType = HealingType.herbs //following the above override, this would set itemType to 16
+
+Passing and returning enumerations with functions:
+HealingType TradeItems (HealingType item) {
+//code magic and what not that determines how the item given to the function should be handled.
+return item;
+}
